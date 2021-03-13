@@ -1,6 +1,6 @@
 FROM maven:latest
 
-RUN mkdir /apps/maven-app/
+RUN mkdir -p /apps/maven-app/
 WORKDIR /apps/maven-app/
 
 COPY ./my-app/target/*.jar .
