@@ -7,4 +7,4 @@ echo "****************************"
 echo "** Building Docker Image ***"
 echo "****************************"
 
-docker build -t dorivin1/maven-hello-world:$BUILD_TAG
+docker build -t dorivin1/maven-hello-world:$BUILD_TAG .
