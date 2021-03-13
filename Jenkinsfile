@@ -22,13 +22,19 @@ pipeline {
 
         stage('Push') {
             steps {
-                sh './jenkins/push/push_docker_image.sh'
+                sh '''
+	    	    chmod +x ./jenkins/push/push_docker_image.sh
+		    ./jenkins/push/push_docker_image.sh
+		'''
             }
         }
 
         stage('Deploy') {
             steps {
-                sh './jenkins/deploy/deploy_docker_image.sh'
+                sh '''
+		    chmod +x ./jenkins/deploy/deploy_docker_image.sh
+		    ./jenkins/deploy/deploy_docker_image.sh
+		 '''
             }
         }
     }
