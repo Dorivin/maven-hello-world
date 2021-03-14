@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh '''
                     chmod +x ./jenkins/build/build_jar.sh ./jenkins/build/build_image.sh 
-		    ./jenkins/build/build_jar.sh mvn -B -DskipTests clean package
+		    ./jenkins/build/build_jar.sh mvn -B -DskipTests package
                     ./jenkins/build/build_image.sh
                 '''
             }
