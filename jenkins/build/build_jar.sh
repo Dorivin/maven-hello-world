@@ -3,7 +3,6 @@
 echo "***************************"
 echo "** Building jar ***********"
 echo "***************************"
+WORKSAPCE_DIR=/var/jenkins_home/workspace/Maven-CI-CD/my-app
 
-JAVA_PROJECT_DIR=/home/jenkins/Refael_Exercise/maven-hello-world/my-app
-
-docker run --rm  -v  $JAVA_PROJECT_DIR:/app -w /app maven:3-alpine "$@"
+docker run --rm -w $WORKSPACE_DIR maven:3-alpine "$@"
